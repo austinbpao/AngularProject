@@ -1,0 +1,36 @@
+<!-- <div class = "main-body">
+    <br>
+    <label for="ingredient-select">Select an Ingredient: </label>
+    <div>
+        <select [(ngModel)]="selectedIngredient" name="ingredient-select" id="ingredient-select" (change)="ingredientSelected()">
+            <option *ngFor="let ingredient of ingredients" [ngValue]="ingredient">{{ingredient.name}}</option>
+        </select>
+    </div>
+    <div>
+        <button class="button" id="add-ingredient" (click)="addIngredient()">Add Ingredient</button>
+        <button class="button" id="edit-ingredient" (click)="editIngredient()">Edit Selected Ingredient</button>
+    </div>
+</div> -->
+<!-- <div class="modal" [ngStyle]="{'visibility': updating ? 'visible' : 'hidden'}" (click)="updating=false">
+    <div class="modal-contents" (click)="stopProp($event)"> -->
+        <form class="ingredient-form" [formGroup]="ingredientForm" (ngSubmit)="submitIngredient()">
+            <label for="ingredient-name-input">Ingredient Name</label>
+            <input type="text" value="" id="ingredient-name-input" formControlName="ingredientName">
+            <label for="ingredient-quantity-input">Ingredient Quantity</label>
+            <input type="number" id="ingredient-quantity-input" formControlName="ingredientQuantity">
+            <label for="measure-select">Measurement</label>
+            <select name="" id="" formControlName="ingredientUnit">
+                <option value="Cup">Cup</option>
+                <option value="Tablespoon">Tablespoon</option>
+                <option value="Teaspoon">Teaspoon</option>
+                <option value="Cup">Cup</option>
+                <option value="Pound">Pound</option>
+                <option value="Dash">Dash</option>
+            </select>
+    
+            <button class = "button" type="submit" id="submit-ingredient-button">Confirm Ingredient</button>
+        </form>
+
+    <!-- </div>
+    
+</div> -->

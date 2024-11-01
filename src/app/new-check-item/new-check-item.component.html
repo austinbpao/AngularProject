@@ -1,0 +1,5 @@
+<form [formGroup]="checkItemForm" (ngSubmit)="onSubmit()">
+        <input id="check" type ="checkbox" formControlName="isDone">
+        <input id="NewCheckTextEntry"  formControlName="name" [ngStyle]="{'text-decoration': checkItemForm.value.isDone ? 'line-through' : 'none'}">
+        <button class="button" type="submit">Add</button>
+</form>

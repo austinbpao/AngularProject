@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --main-back-color: #1E90FF;
+    --main-text-color: white;
+    --error-text-color: red;
+    --main-font-family: Helvetica, Arial, sans-serif;
+}
+
+@media print {
+    :root {
+        --main-back-color: white;
+        --main-text-color: black;
+    }
+
+    input {
+        display: none;
+    }
+
+    app-nav-bar {
+        display: none;
+    }
+
+}
+
+html {
+    background-color: var(--main-back-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+}
+
+a {
+    color: var(--main-text-color);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.error-text {
+    color: var(--error-text-color);
+}

@@ -1,0 +1,15 @@
+<div class="order-container">
+    <form class="order-container" [formGroup]="orderForm" (ngSubmit)="submitOrder()">
+        <label for="order-customer-name">Enter your name: </label>
+        <input type="text" id="order-customer-name" formControlName="customerName" required>
+        <div class="error-text" *ngIf="orderForm.invalid && this.orderForm.controls.customerName.dirty">Name is required</div>
+        <label for="drink-name-select">Pick a drink:</label>
+        <select id="drink-name-select" formControlName="drinkId" required>
+            <option *ngFor="let drink of drinks" value="{{drink.id}}">{{drink.name}}</option>
+            <!-- <option *ngFor="let softDrink of softDrinks" value="{{softDrink.id}}">{{softDrink.name}}</option> -->
+        </select>
+        <label for="drink-name-select">Special Instructions:</label>
+        <textarea name="" id="" cols="30" rows="5" placeholder="On the rocks, Substitute Bourbon" formControlName="instructions"></textarea>
+        <button class="button" type="submit"id="submit-order-button">Confirm Order</button>
+    </form>
+</div>

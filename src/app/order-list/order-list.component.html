@@ -1,0 +1,7 @@
+<div *ngFor="let order of orders">
+    <h1>{{order.customerName}}</h1>
+    <h2>{{order.drink.name}}</h2>
+    <ul *ngFor="let ingredient of order.drink.ingredients">{{ingredient.quantity}} {{ingredient.unit}} {{ingredient.name}}</ul>
+    <button (click)="completeOrder(order)">Mark Complete</button>
+    <button (click)="cancelOrder(order)">Cancel</button>
+</div>

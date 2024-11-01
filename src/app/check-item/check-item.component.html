@@ -1,0 +1,5 @@
+<div *ngFor="let checkItem of checkItems">
+    <input id="check" type ="checkbox" [(ngModel)]="checkItem.isDone">
+    <input id="CheckTextEntry" value="{{checkItem.name}}" [ngStyle]="{'text-decoration': checkItem.isDone ? 'line-through' : 'none'}">
+    <button type ="button" (click)="removeCheckItem(checkItem)">Remove</button>
+</div>

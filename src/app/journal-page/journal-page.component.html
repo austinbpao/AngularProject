@@ -1,0 +1,12 @@
+<h1>Journaling WebPage</h1>
+
+<h3>To-Do</h3>
+<app-check-item [checkItems]="journal.toDoCheckList" [parentJournalEntry]="journal"></app-check-item>
+<app-new-check-item [parentJournalEntry]="journal"></app-new-check-item>
+<app-text-entry [accomplishText]="journal.accomplishText"
+[gratitudeText]="journal.gratitudeText"
+[planText]="journal.planText"></app-text-entry>
+<div>
+    <button type="submit">Save Journal Entry</button>
+</div>
+
